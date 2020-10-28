@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textViewName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="monospace"
+        android:padding="@dimen/padding_text"
+        android:text="@string/tashaf_mukhtar"
+        android:textColor="@color/text_color_heading"
+        android:textSize="@dimen/text_size_heading"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageViewUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/demo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="Enter Your Nick Name Here"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewUser" />
+
+    <Button
+        android:id="@+id/buttonDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Done"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+    <TextView
+        android:id="@+id/textViewNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/textViewName"
+        app:layout_constraintStart_toStartOf="@+id/textViewName"
+        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonDone">
+
+        <TextView
+            android:id="@+id/textViewDetails"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This blog contains notes for myself from various published papers,journals,websites, books and blogs. It also contains some of the projects I completed and my thoughts and point of view of certain topics. I hope this blog is helpful to you. Artificial Intelligence (AI)/Machine Learning (ML) engineer with a proven record of innovation and ability to work within multi-disciplinary teams to deliver valuable insights via data-driven methods and communicate results to diverse audiences. Machine Learning: Statistical Modelling (e.g., Regression, Principal Component Analysis (PCA)), Deep Learning, NLP, Data Mining, Scikit-learn, Keras, TensorFlow, Git Programming Languages: Python, R, Java Data Visualizations: Tableau, Matplotlib, Plotly, Rshiny, Dash Presentation: Communication, Dashboards  Applied variety of machine learning/ deep learning algorithm to data sets  to optimize and improve customer experiences and business strategies in different domains such as financial, wearable or clinical. Interacted and collaborated with cross-functional teams of size 2 – 15 to ensure complete delivery of solutions. Generated actionable insights for business sponsors by finding, retrieving, cleaning and analyzing appropriate data to identify trends and patterns. Participated in daily stand-up meetings, planning meetings and review sessions using Scrum /Agile methodology. Mentored junior team members in their technical and professional development.Applied variety of machine learning/ deep learning algorithm to data sets  to optimize and improve customer experiences and business strategies in different domains such as financial, wearable or clinical. Interacted and collaborated with cross-functional teams of size 2 – 15 to ensure complete delivery of solutions. Generated actionable insights for business sponsors by finding, retrieving, cleaning and analyzing appropriate data to identify trends and patterns. Participated in daily stand-up meetings, planning meetings and review sessions using Scrum /Agile methodology. Mentored junior team members in their technical and professional development."
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
