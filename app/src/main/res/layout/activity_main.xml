@@ -1,86 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:id="@+id/textViewName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:fontFamily="monospace"
-        android:padding="@dimen/padding_text"
-        android:text="@string/tashaf_mukhtar"
-        android:textColor="@color/text_color_heading"
-        android:textSize="@dimen/text_size_heading"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/imageViewUser"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/demo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName"
-        tools:srcCompat="@tools:sample/avatars" />
+    <data>
 
-    <EditText
-        android:id="@+id/editTextTextPersonName"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Enter Your Nick Name Here"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewUser" />
+        <variable
+            name="myName"
+            type="com.tashi.aboutme.MyName" />
 
-    <Button
-        android:id="@+id/buttonDone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Done"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+    </data>
 
-    <TextView
-        android:id="@+id/textViewNick"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="@+id/textViewName"
-        app:layout_constraintStart_toStartOf="@+id/textViewName"
-        app:layout_constraintTop_toBottomOf="@+id/textViewName" />
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonDone">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
 
         <TextView
-            android:id="@+id/textViewDetails"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="This blog contains notes for myself from various published papers,journals,websites, books and blogs. It also contains some of the projects I completed and my thoughts and point of view of certain topics. I hope this blog is helpful to you. Artificial Intelligence (AI)/Machine Learning (ML) engineer with a proven record of innovation and ability to work within multi-disciplinary teams to deliver valuable insights via data-driven methods and communicate results to diverse audiences. Machine Learning: Statistical Modelling (e.g., Regression, Principal Component Analysis (PCA)), Deep Learning, NLP, Data Mining, Scikit-learn, Keras, TensorFlow, Git Programming Languages: Python, R, Java Data Visualizations: Tableau, Matplotlib, Plotly, Rshiny, Dash Presentation: Communication, Dashboards  Applied variety of machine learning/ deep learning algorithm to data sets  to optimize and improve customer experiences and business strategies in different domains such as financial, wearable or clinical. Interacted and collaborated with cross-functional teams of size 2 – 15 to ensure complete delivery of solutions. Generated actionable insights for business sponsors by finding, retrieving, cleaning and analyzing appropriate data to identify trends and patterns. Participated in daily stand-up meetings, planning meetings and review sessions using Scrum /Agile methodology. Mentored junior team members in their technical and professional development.Applied variety of machine learning/ deep learning algorithm to data sets  to optimize and improve customer experiences and business strategies in different domains such as financial, wearable or clinical. Interacted and collaborated with cross-functional teams of size 2 – 15 to ensure complete delivery of solutions. Generated actionable insights for business sponsors by finding, retrieving, cleaning and analyzing appropriate data to identify trends and patterns. Participated in daily stand-up meetings, planning meetings and review sessions using Scrum /Agile methodology. Mentored junior team members in their technical and professional development."
+            android:id="@+id/textViewName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="monospace"
+            android:padding="@dimen/padding_text"
+            android:text="@={myName.name}"
+            android:textColor="@color/text_color_heading"
+            android:textSize="@dimen/text_size_heading"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-    </ScrollView>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/imageViewUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/demo"
+            android:contentDescription="@string/todo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:hint="@string/enter_your_nick_name_here"
+            android:importantForAutofill="no"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewUser" />
+
+        <Button
+            android:id="@+id/buttonDone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/done"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+
+        <TextView
+            android:id="@+id/textViewNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@={myName.nickName}"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="@+id/textViewName"
+            app:layout_constraintStart_toStartOf="@+id/textViewName"
+            app:layout_constraintTop_toBottomOf="@+id/textViewName" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonDone">
+
+            <TextView
+                android:id="@+id/textViewDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/this_blog_contains_notes_for_myself_from_various_published_papers_journals_websites_books_and_blogs_it_also_contains_some_of_the_projects_i_completed_and_my_thoughts_and_point_of_view_of_certain_topics_i_hope_this_blog_is_helpful_to_you_artificial_intelligence_ai_machine_learning_ml_engineer_with_a_proven_record_of_innovation_and_ability_to_work_within_multi_disciplinary_teams_to_deliver_valuable_insights_via_data_driven_methods_and_communicate_results_to_diverse_audiences_machine_learning_statistical_modelling_e_g_regression_principal_component_analysis_pca_deep_learning_nlp_data_mining_scikit_learn_keras_tensorflow_git_programming_languages_python_r_java_data_visualizations_tableau_matplotlib_plotly_rshiny_dash_presentation_communication_dashboards_applied_variety_of_machine_learning_deep_learning_algorithm_to_data_sets_to_optimize_and_improve_customer_experiences_and_business_strategies_in_different_domains_such_as_financial_wearable_or_clinical_interacted_and_collaborated_with_cross_functional_teams_of_size_2_15_to_ensure_complete_delivery_of_solutions_generated_actionable_insights_for_business_sponsors_by_finding_retrieving_cleaning_and_analyzing_appropriate_data_to_identify_trends_and_patterns_participated_in_daily_stand_up_meetings_planning_meetings_and_review_sessions_using_scrum_agile_methodology_mentored_junior_team_members_in_their_technical_and_professional_development_applied_variety_of_machine_learning_deep_learning_algorithm_to_data_sets_to_optimize_and_improve_customer_experiences_and_business_strategies_in_different_domains_such_as_financial_wearable_or_clinical_interacted_and_collaborated_with_cross_functional_teams_of_size_2_15_to_ensure_complete_delivery_of_solutions_generated_actionable_insights_for_business_sponsors_by_finding_retrieving_cleaning_and_analyzing_appropriate_data_to_identify_trends_and_patterns_participated_in_daily_stand_up_meetings_planning_meetings_and_review_sessions_using_scrum_agile_methodology_mentored_junior_team_members_in_their_technical_and_professional_development"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </ScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
